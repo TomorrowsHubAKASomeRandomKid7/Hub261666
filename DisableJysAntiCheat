@@ -1,0 +1,45 @@
+local function msg(title, text, duration)
+game.StarterGui:SetCore("SendNotification", {
+Title = ""..title.."";
+Text = ""..text.."";
+Duration = duration;
+})
+end)
+local plr = game:GetService("Players").LocalPlayer
+local Anti = plr.Character.Anti
+local ac = plr.Character["JyAntiCheat.lua [READ]"]
+
+if Anti then
+  if ac then
+    msg("Anti Jys Anti Cheat", "JysAntiCheat (probably) detected.", 5)
+    anti.Disabled = false
+    ac.Disabled = false
+    anti:Destroy()
+    ac:Destroy()
+    wait(3)
+    msg("Anti Jys Anti Cheat", "Successfully Disabled+Deleted Anti Cheat", 5)
+    wait(2)
+    msg("Anti jys Anti Cheat", "If you respawn or refresh, run this script Again.", 5)
+  end
+  if not ac then
+   msg("Anti Jys Anti Cheat", "Only Main Anti Cheat Main Detected." 5)
+    ac.Disabled = true
+   ac:Destroy()
+   wait(3)
+   msg("Anti Jys Anti Cheat", "Successfully Disabled+Deleted main Anti Cheat",  5)
+  end
+end
+if ac then
+  if not Anti then
+    msg("Anti Jys Anti Cheat", "Only anti-anti cheat deleted found.", 5)
+    ac.Disabled = true
+    ac:Destroy()
+    wait(3)
+    msg("Anti Jys Anti Cheat", "Successfuly disabled anti-anti cheat delete.", 5)
+   end
+end
+if not Anti then
+  if not ac then
+  msg("Anti Jys Anti Cheat", "Couldn't detect Jys Anti Cheat.", 5)
+  end
+end
