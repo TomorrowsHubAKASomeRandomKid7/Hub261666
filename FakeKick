@@ -1,0 +1,13 @@
+local Players = game:GetService("Players")
+Players.PlayerRemoving:Connect(function(player)
+local args = {
+[1] = ":kick "..player.Name,
+[2] = "All"
+}
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+local args = {
+[1] = "[TOMORROWS HUB ADMIN]: Player "..player.Name.. " has been kicked!",
+[2] = "All"
+}
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+end)
