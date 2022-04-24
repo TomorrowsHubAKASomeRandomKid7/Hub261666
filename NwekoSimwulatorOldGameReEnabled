@@ -1,0 +1,21 @@
+if game.PlaceId == 7213706025 then
+	local plr = game:GetService("Players").LocalPlayer
+	local tp = plr.PlayerGui.ScreenGui.Frame
+	local adtext = [[
+	Nweko Simwulator OLD Game-Re-Enabled
+	Made By Tomorrow (Tmbmoordenaarssalt)
+	discord.gg/hTCXEFC6mH
+	Yes, I Also Made The Server Crash Script.
+	]]
+	tp.TextLabel.Name = "TextLabel1"
+	tp.TextLabel.Name = "TextLabel2"
+	tp.TextLabel1.Text = adtext
+	tp.TextLabel2.Text = adtext
+	tp.TextButton.LocalScript:Destroy()
+	tp.TextButton.Text = "Re-Enable Game"
+	tp.TextButton.MouseButton1Click:Connect(function()
+    	plr.PlayerGui.NekoGui.Enabled = true
+    	plr.PlayerGui.NekoGui.TextLabel.Text = "#TOMORROW_ARMY"
+    	tp:Destroy()
+	end)
+end
